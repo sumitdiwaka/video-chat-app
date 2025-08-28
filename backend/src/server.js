@@ -12,7 +12,7 @@ app.use(express.json());
 
 app.use(clerkMiddleware());
 
-app.use('/api/inngest',serve({Client:inngest,functions}))
+app.use('/api/inngest',serve({client:inngest,functions}))
 
 app.get('/',(req,res)=>{
   res.send('Hello World!');
