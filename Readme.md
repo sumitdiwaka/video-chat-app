@@ -1,6 +1,8 @@
 Video Chat App - A Full-Stack Slack Clone
 This is a feature-rich, full-stack video chat application that mimics the core functionalities of Slack. It includes real-time messaging, video and audio calls, file sharing, and much more. This project is built with the MERN stack (MongoDB, Express.js, React.js, Node.js) and integrates several modern technologies to provide a seamless user experience.
 
+Live Demo :-https://video-chat-app-frontend-alpha.vercel.app
+
 ✨ Features
 - Real-time Messaging: Instantaneous messaging between users in channels and direct messages.
 - Video and Audio Calls: High-quality video and audio calls with features like screen sharing, reactions, and call recording.
