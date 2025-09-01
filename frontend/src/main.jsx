@@ -1,4 +1,4 @@
-import { StrictMode } from 'react'
+import React,{ StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import './index.css'
 import App from './App.jsx'
@@ -14,11 +14,14 @@ import {
 } from "react-router";
 import { Toaster } from "react-hot-toast";
 
-import * as  Sentry from "@sentry/react";
+// https://08a491b266621d1220b14fcdd134db3e@o4509919592120320.ingest.us.sentry.io/4509926251298816
+
+
 
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import AuthProvider from './providers/AuthProvider.jsx'
-import React from 'react'
+import * as Sentry from "@sentry/react";
+
 
 
 const queryClient = new QueryClient();
@@ -31,7 +34,7 @@ if (!PUBLISHABLE_KEY) {
 }
 
 Sentry.init({
-  dsn: "https://08a491b266621d1220b14fcdd134db3e@o4509919592120320.ingest.us.sentry.io/4509926251298816",
+  dsn: import.meta.env.VITE_SENTRY_DSN,
   integrations: [
     Sentry.reactRouterV7BrowserTracingIntegration({
       useEffect: React.useEffect,
@@ -43,7 +46,6 @@ Sentry.init({
   ],
   tracesSampleRate: 1.0,
 });
-
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
